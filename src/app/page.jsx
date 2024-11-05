@@ -8,9 +8,11 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirect to login page
-    router.replace("/login");
+    // Ensure redirect happens only once
+    if (typeof window !== "undefined") {
+      router.replace("/login");
+    }
   }, [router]);
 
-  return null;
+  return null; // Redirect ke baad kuch render nahi karna
 }
