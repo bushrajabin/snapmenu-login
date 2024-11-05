@@ -1,12 +1,18 @@
-import React from "react";
-import Link from "next/link";
+// src/app/page.jsx
 
- export default function Page() {
-  return (
-    <div className="bg-green-900 flex flex-row items-center w-44 m-auto text-center justify-center mt-10">
-      <Link href="/login">Login page</Link>
-    </div>
-  );
+"use client"; // Client Component banane ke liye directive
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
+export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Ensure redirect happens only once
+    if (typeof window !== "undefined") {
+      router.replace("/login");
+    }
+  }, [router]);
+
+  return null; // Redirect ke baad kuch render nahi karna
 }
-
-
