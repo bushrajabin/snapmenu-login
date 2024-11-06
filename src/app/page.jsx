@@ -1,6 +1,4 @@
-// src/app/page.jsx
-
-"use client"; // Client Component banane ke liye directive
+"use client";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -14,5 +12,5 @@ export default function Home() {
     }
   }, [router]);
 
-  return null; // Redirect ke baad kuch render nahi karna
+  return null; 
 }
