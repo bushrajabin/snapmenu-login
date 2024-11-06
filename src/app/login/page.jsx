@@ -33,7 +33,7 @@ export default function Login() {
 
           <div className={custom.contnuewith}>
             <div className={custom.line}></div>
-            <div className="pl-4 pr-4 text-sm">or continue with</div>
+            <div className="pl-4 pr-4 text-sm text-black">or continue with</div>
             <div className={custom.line}></div>
           </div>
 
@@ -42,7 +42,7 @@ export default function Login() {
           </div>
 
           <div className={custom.signupoption}>
-            <h2>
+            <h2 className="text-black">
               Don&apos;t have an account?{" "}
               <span className="text-green-400">Sign up</span>
             </h2>
